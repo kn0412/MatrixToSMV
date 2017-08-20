@@ -5,8 +5,15 @@
  */
 package matrixtosmv;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.util.Pair;
 
 /**
@@ -18,11 +25,21 @@ public class MatrixToSMV {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         // TODO code application logic here
+        File file = new File("sample.txt");
+        BufferedReader br = new BufferedReader(new FileReader(file));
+        String str;
+        while((str = br.readLine()) != null){
+            
+        }
+        br.close();
     }
     
     public static String convert(Map<Pair<Integer, Integer>, Integer> input, Map<Pair<Integer, Integer>, Integer> output, Map<Integer, Integer> marking){
+        //
+        //Pair<Place, Transition>の順
+        //
         String result = "";
         final String separator = System.lineSeparator();
         
@@ -64,7 +81,9 @@ public class MatrixToSMV {
         for(int i = 1; i <= input.values().size(); i++){
             ArrayList tmpList = new ArrayList();
             for(int j = 1; j <= input.keySet().size(); j++){
-                
+                if(input.get(new Pair(j, i)) > 0){
+                    
+                }
             }
         }
         
