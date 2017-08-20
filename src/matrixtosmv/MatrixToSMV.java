@@ -56,6 +56,9 @@ public class MatrixToSMV {
             result += "t[" + i + "] : " + i + ";" + separator;
         }
         result += "TRUE : 0;" + separator + "esac;" + separator;
+        for(int i = 1; i <= input.keySet().size(); i++){
+            result += "init(p[" + i + "]) : " + marking.get(i) + ";" + separator;
+        }
         
         
         return result;
