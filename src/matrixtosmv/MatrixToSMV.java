@@ -51,6 +51,11 @@ public class MatrixToSMV {
         result += "next(fire) = 0)" + separator + separator;
         
         result += "ASSIGN" + separator;
+        result += "init(fire) := case" + separator;
+        for(int i = 1; i <= input.values().size(); i++){
+            result += "t[" + i + "] : " + i + ";" + separator;
+        }
+        result += "TRUE : 0;" + separator + "esac;" + separator;
         
         
         return result;
