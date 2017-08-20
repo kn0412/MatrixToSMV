@@ -5,6 +5,7 @@
  */
 package matrixtosmv;
 
+import java.util.ArrayList;
 import java.util.Map;
 import javafx.util.Pair;
 
@@ -60,6 +61,12 @@ public class MatrixToSMV {
             result += "init(p[" + i + "]) : " + marking.get(i) + ";" + separator;
         }
         
+        for(int i = 1; i <= input.values().size(); i++){
+            ArrayList tmpList = new ArrayList();
+            for(int j = 1; j <= input.keySet().size(); j++){
+                
+            }
+        }
         
         return result;
     }
