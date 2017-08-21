@@ -18,9 +18,6 @@ public class MatrixToSMV {
     public static void main(String[] args) throws Exception {
         String inputFile = "sample.txt";
         String outputFile = "";
-        if(args.length > 2){
-            return;
-        }
         switch(args.length){
             case 2:
                 outputFile = args[1];
